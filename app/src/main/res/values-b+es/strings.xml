@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IntentsImplicitos</string>
+    <string name="login_label">Login</string>
+    <string name="password_label">Contraseña</string>
+    <string name="password_repeat">Repetir contraseña</string>
+    <string name="name_label">Nombre</string>
+    <string name="lastname_label">Apellido</string>
+    <string name="email_label">Email</string>
+    <string name="SignUp_text">Registrarse</string>
+    <string name="wrong_credentials">Usuario o contraseña incorrectas</string>
+    <string name="welcome_text">Bienvenido</string>
+    <string name="error_empty_fields">ERROR: Campos vacíos</string>
+    <string name="r_btn_fuelstation">Gasolineras</string>
+    <string name="r_btn_eroski">Supermercados EROSKI</string>
+    <string name="r_btn_cinema">Cines</string>
+    <string name="r_btn_scaperoom">Salas de Escape</string>
+    <string name="error_insert">Error: No se pueden introducir los datos</string>
+</resources>
