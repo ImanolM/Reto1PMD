@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (userLogin != null) {
             Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-            intent.putExtra("user", userLogin);
+            intent.putExtra("user", userLogin.getLogin());
             startActivityForResult(intent, DASHBOARD_ACTIVITY);
         } else {
             showToast(getString(R.string.wrong_credentials));
