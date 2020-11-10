@@ -43,17 +43,24 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     }
 
     public void nextObject() {
+        Context context = imageView.getContext();
         if (imageView.getDrawable() == null) {
             DataBaseHelper dataBaseHelper = new DataBaseHelper(DashboardActivity.this);
             this.things = dataBaseHelper.getWords();
-            Context context = imageView.getContext();
             int id = context.getResources().getIdentifier(things.get(0), "drawable", context.getPackageName());
             imageView.setImageResource(id);
         } else {
+
             currentImagePosition++;
-            Context context = imageView.getContext();
-            int id = context.getResources().getIdentifier(things.get(currentImagePosition), "drawable", context.getPackageName());
-            imageView.setImageResource(id);
+            if (currentImagePosition > this.things.size() - 1) {
+                currentImagePosition = 0;
+                int id = context.getResources().getIdentifier(things.get(currentImagePosition), "drawable", context.getPackageName());
+                imageView.setImageResource(id);
+            } else {
+                int id = context.getResources().getIdentifier(things.get(currentImagePosition), "drawable", context.getPackageName());
+                imageView.setImageResource(id);
+            }
+
         }
 
     }
