@@ -16,4 +16,7 @@
     <string name="r_btn_cinema">Cinemas</string>
     <string name="r_btn_scaperoom">Scape Rooms</string>
     <string name="error_insert">Error: Cant introduce data</string>
+    <string name="level_easy">Easy</string>
+    <string name="level_normal">Normal</string>
+    <string name="level_hard">Hard</string>
 </resources>

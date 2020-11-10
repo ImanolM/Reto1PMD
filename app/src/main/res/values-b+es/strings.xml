@@ -15,4 +15,10 @@
     <string name="r_btn_cinema">Cines</string>
     <string name="r_btn_scaperoom">Salas de Escape</string>
     <string name="error_insert">Error: No se pueden introducir los datos</string>
+    <string name="level_easy">Fácil</string>
+    <string name="level_normal">Normal</string>
+    <string name="level_hard">Difícil</string>
+
+
+
 </resources>
