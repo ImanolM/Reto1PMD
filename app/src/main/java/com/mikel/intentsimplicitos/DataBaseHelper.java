@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 
@@ -17,6 +20,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String LASTNAME = "lastname";
     public static final String EMAIL = "email";
     public static final String PASSWORD = "password";
+    public static final String QUIZ = "quiz";
+    public static final String TERM = "term";
 
     public DataBaseHelper(@Nullable Context context) {
         super(context, USER + "s.db", null, 1);
@@ -24,10 +29,39 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + USER + " (id INTEGER PRIMARY KEY AUTOINCREMENT," + LOGIN + " VARCHAR, " + NAME + " VARCHAR, " + LASTNAME + " VARCHAR, " + EMAIL + " VARCHAR, " + PASSWORD + " VARCHAR)";
+        String table1 = "CREATE TABLE " + USER + " (id INTEGER PRIMARY KEY AUTOINCREMENT," + LOGIN + " VARCHAR, " + NAME + " VARCHAR, " + LASTNAME + " VARCHAR, " + EMAIL + " VARCHAR, " + PASSWORD + " VARCHAR)";
+        String table2 = "CREATE TABLE " + QUIZ + " (id integer PRIMARY KEY AUTOINCREMENT,  " + TERM + " VARCHAR)";
 
-        db.execSQL(createTableStatement);
+        db.execSQL(table1);
+        db.execSQL(table2);
+
+        String insert = "INSERT INTO " + QUIZ + " VALUES ('limon'), ('lampara'),('ordenador'),('sol'),('patata'),('guitarra'),('balon'),('raqueta')";
+
+        db.execSQL(insert);
     }
+
+    public List<String> getWords(){
+        List<String> wordsList = new ArrayList<>();
+
+        String obtainWords = "SELECT * FROM " + QUIZ;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(obtainWords, null);
+
+        if(cursor.moveToFirst()){
+            do{
+                String newWord = cursor.getString(1);
+                wordsList.add(newWord);
+            }while(cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return wordsList;
+    }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
