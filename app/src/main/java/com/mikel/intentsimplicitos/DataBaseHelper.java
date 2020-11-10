@@ -35,13 +35,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(table1);
         db.execSQL(table2);
 
-        String insert = "INSERT INTO " + QUIZ + " VALUES ('limon'), ('lampara'),('ordenador'),('sol'),('patata'),('guitarra'),('balon'),('raqueta')";
+        String insert = "INSERT INTO QUIZ(term) VALUES ('limon'), ('lampara'),('ordenador'),('sol'),('patata'),('guitarra'),('balon'),('raqueta')";
 
         db.execSQL(insert);
     }
 
-    public List<String> getWords(){
-        List<String> wordsList = new ArrayList<>();
+    public ArrayList<String> getWords(){
+        ArrayList<String> wordsList = new ArrayList<>();
 
         String obtainWords = "SELECT * FROM " + QUIZ;
 

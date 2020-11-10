@@ -50,12 +50,11 @@ public class MainActivity extends AppCompatActivity {
         DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
         User userLogin = dataBaseHelper.getUser(loginText, passwordText);
 
-        if(userLogin!=null){
+        if (userLogin != null) {
             Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-            intent.putExtra("User","userLogin");
+            intent.putExtra("user", userLogin.getLogin());
             startActivityForResult(intent, DASHBOARD_ACTIVITY);
-        }
-        else{
+        } else {
             showToast(getString(R.string.wrong_credentials));
         }
 
