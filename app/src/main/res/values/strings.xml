@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">ExplicitIntents</string>
-        <string name="login_label">Login</string>
-        <string name="password_label">Password</string>
-        <string name="password_repeat">Repeat Password</string>
-        <string name="name_label">Name</string>
-        <string name="lastname_label">Lastname</string>
-        <string name="email_label">Email</string>
-        <string name="SignUp_text">Sign Up</string>
-        <string name="wrong_credentials">Wrong username or password</string>
-        <string name="welcome_text">Welcome</string>
-        <string name="error_empty_fields">ERROR: Empty Fields</string>
-        <string name="r_btn_fuelstation">Fuel Stations</string>
-        <string name="r_btn_eroski">EROSKI Supermarkets</string>
-        <string name="r_btn_cinema">Cinemas</string>
-        <string name="r_btn_scaperoom">Scape Rooms</string>
-        <string name="error_insert">Error: Cant introduce data</string>
+    <string name="app_name">ExplicitIntents</string>
+    <string name="login_label">Login</string>
+    <string name="password_label">Password</string>
+    <string name="password_repeat">Repeat Password</string>
+    <string name="name_label">Name</string>
+    <string name="lastname_label">Lastname</string>
+    <string name="email_label">Email</string>
+    <string name="SignUp_text">Sign Up</string>
+    <string name="wrong_credentials">Wrong username or password</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="error_empty_fields">ERROR: Empty Fields</string>
+    <string name="r_btn_fuelstation">Fuel Stations</string>
+    <string name="r_btn_eroski">EROSKI Supermarkets</string>
+    <string name="r_btn_cinema">Cinemas</string>
+    <string name="r_btn_scaperoom">Scape Rooms</string>
+    <string name="error_insert">Error: Cant introduce data</string>
 </resources>

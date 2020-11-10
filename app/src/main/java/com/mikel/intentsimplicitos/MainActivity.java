@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         this.loginButton = (Button) findViewById(R.id.btnLogin);
         this.signUpButton = (Button) findViewById(R.id.btnSignUp);
 
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,12 +49,11 @@ public class MainActivity extends AppCompatActivity {
         DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
         User userLogin = dataBaseHelper.getUser(loginText, passwordText);
 
-        if(userLogin!=null){
+        if (userLogin != null) {
             Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-            intent.putExtra("User","userLogin");
+            intent.putExtra("User", "userLogin");
             startActivityForResult(intent, DASHBOARD_ACTIVITY);
-        }
-        else{
+        } else {
             showToast(getString(R.string.wrong_credentials));
         }
 
