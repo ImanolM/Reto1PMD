@@ -15,4 +15,7 @@
     <string name="r_btn_cinema">Cines</string>
     <string name="r_btn_scaperoom">Salas de Escape</string>
     <string name="error_insert">Error: No se pueden introducir los datos</string>
+    <string name="next_object">Siguiente objecto</string>
+    <string name="click_to_show_objects">Haz click para mostrar objetoss</string>
+
 </resources>

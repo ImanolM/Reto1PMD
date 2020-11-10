@@ -20,7 +20,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private ArrayList<String> things = null;
     private ImageView imageView = null;
     private Integer currentImagePosition = 0;
-
+private TextView objectTitle = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         Intent intent = getIntent();
         this.nextButton = (Button) findViewById(R.id.nextButton);
         this.imageView = (ImageView) findViewById(R.id.imageView);
+        this.objectTitle = (TextView) findViewById(R.id.objectTitle);
 
         String concatenado = intent.getExtras().getString("user");
 
@@ -50,7 +51,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             int id = context.getResources().getIdentifier(things.get(0), "drawable", context.getPackageName());
             imageView.setImageResource(id);
         } else {
-
             currentImagePosition++;
             if (currentImagePosition > this.things.size() - 1) {
                 currentImagePosition = 0;
@@ -62,7 +62,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             }
 
         }
-
+        objectTitle.setText(things.get(currentImagePosition));
     }
 
     @Override

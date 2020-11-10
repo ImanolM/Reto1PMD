@@ -16,4 +16,7 @@
         <string name="r_btn_cinema">Cinemas</string>
         <string name="r_btn_scaperoom">Scape Rooms</string>
         <string name="error_insert">Error: Cant introduce data</string>
+        <string name="next_object">Next object</string>
+        <string name="click_to_show_objects">Click to show objects</string>
+
 </resources>
