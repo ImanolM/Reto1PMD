@@ -37,6 +37,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         this.imageView = (ImageView) findViewById(R.id.imageView);
         this.objectTitle = (TextView) findViewById(R.id.objectTitle);
         this.imageButton = (ImageButton) findViewById( R.id.imgbtn_Info );
+        imageButton.setVisibility(View.GONE);
 
         String concatenado = intent.getExtras().getString("user");
 
@@ -105,12 +106,14 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     public void nextObject() {
         Context context = imageView.getContext();
         if (imageView.getDrawable() == null) {
+            imageButton.setVisibility(View.VISIBLE);
             DataBaseHelper dataBaseHelper = new DataBaseHelper(DashboardActivity.this);
             this.things = dataBaseHelper.getWords();
             int id = context.getResources().getIdentifier(things.get(0), "drawable", context.getPackageName());
             imageView.setImageResource(id);
         } else {
             currentImagePosition++;
+            this.imageButton.setVisibility(View.VISIBLE);
             if (currentImagePosition > this.things.size() - 1) {
                 currentImagePosition = 0;
                 int id = context.getResources().getIdentifier(things.get(currentImagePosition), "drawable", context.getPackageName());

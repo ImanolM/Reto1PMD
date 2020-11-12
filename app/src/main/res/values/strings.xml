@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">ExplicitIntents</string>
+        <string name="app_name">LearnSpanish</string>
         <string name="login_label">Login</string>
         <string name="password_label">Password</string>
         <string name="password_repeat">Repeat Password</string>
@@ -18,10 +18,10 @@
         <string name="error_insert">Error: Cant introduce data</string>
         <string name="next_object">Next object</string>
         <string name="click_to_show_objects">Click to show objects</string>
-        <string name="limon_url">https://es.wikipedia.org/wiki/Citrus_%C3%97_limon</string>
+        <string name="limon_url">https://www.lexico.com/es/definicion/limon</string>
         <string name="balon_url">https://es.wikipedia.org/wiki/Pelota</string>
         <string name="guitarra_url">https://es.wikipedia.org/wiki/Guitarra</string>
-        <string name="lampara_url">https://es.wikipedia.org/wiki/L%C3%A1mpara</string>
+        <string name="lampara_url">https://definicion.de/lampara/</string>
         <string name="ordenador_url">https://es.wikipedia.org/wiki/Computadora</string>
         <string name="patata_url">https://es.wikipedia.org/wiki/Solanum_tuberosum</string>
         <string name="raqueta_url">https://es.wikipedia.org/wiki/Raqueta</string>
